@@ -1,5 +1,5 @@
 # ClamAV-Slcak-Alert
-Alert to slack ClamAV detection events
+Alert ClamAV detection events to slack
 
 ## install
 
