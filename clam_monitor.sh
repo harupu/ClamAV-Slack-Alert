@@ -1,5 +1,6 @@
 #!/bin/bash
 webook_url="##webook_url##"
+user_name=`logname`
 clamd_log="/opt/local/var/log/clamav/clamd.log"
 onaccess_log="/opt/local/var/log/clamav/clamdscanonaccess.log"
 search_word="FOUND"
@@ -35,6 +36,11 @@ sample_action() {
                     { \
                       \"title\":\"Name\", \
                       \"value\":\"${malware_name}\", \
+                      \"short\":false \
+                    }, \
+                    { \
+                      \"title\":\"User\", \
+                      \"value\":\"${user_name}\", \
                       \"short\":true \
                     }, \
                     { \
