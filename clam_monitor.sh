@@ -59,6 +59,11 @@ sample_action() {
                       \"short\":true \
                     }, \
                     { \
+                      \"title\":\"path\", \
+                      \"value\":\"${path}\", \
+                      \"short\":false \
+                    }, \
+                    { \
                       \"title\":\"hash\", \
                       \"value\":\"<https://www.virustotal.com/gui/file/${hash}/detection|${hash}>\", \
                       \"short\":false \
