@@ -1,21 +1,20 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
-"http://www.apple.com/DTDs/PropertyList-1.0.dtd" >
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version='1.0'>
 <dict>
 	<key>Label</key>
-	<string>com.example.ClamdAlert</string>
+	<string>jp.aeyesec.Clamd</string>
 	<key>ProgramArguments</key>
 	<array>
-		<string>/opt/local/share/clamav/clam_monitor.sh</string>
+		<string>/usr/local/sbin/clamd</string>
 	</array>
 	<key>RunAtLoad</key>
 	<true/>
 	<key>KeepAlive</key>
   <true/>
 	<key>StandardErrorPath</key>
-	<string>/dev/null</string>
+	<string>/var/log/clamav/clamd.log</string>
 	<key>StandardOutPath</key>
-	<string>/dev/null</string>
+	<string>/var/log/clamav/clamd.log</string>
 </dict>
 </plist>
