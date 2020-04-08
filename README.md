@@ -29,4 +29,7 @@ Please input slack webook url:https://hooks.slack.com/services/xxxx (Your webook
 
 To find /usr/local/bin/ on dialog, type Command+Shift+G.
 
+![image](https://user-images.githubusercontent.com/7601382/78830555-1c921080-7a23-11ea-85c6-fabcc0e6c21c.png)
+
+
 5. Download eicar.com and check it works or not.
