@@ -1,5 +1,5 @@
 # ClamAV-Slcak-Alert
-Alert ClamAV detection events to slack
+Alert ClamAV detection events to slack. Scheduled scan is not supported now.
 
 ## install
 
