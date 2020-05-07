@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>Label</key>
-	<string>jp.aeyesec.ClamdUpdate</string>
+	<string>jp.aeyesec.ClamdScheduledScan</string>
 	<key>ProgramArguments</key>
 	<array>
 		<string>/usr/local/bin/malware_monitor_wrapper</string>
-		<string>update</string>
+		<string>scan</string>
 	<string></string>
 	</array>
 	<key>RunAtLoad</key>
@@ -15,16 +15,20 @@
 	<key>StartCalendarInterval</key>
 	<array>
 		<dict>
+			<key>Weekday</key>
+            <integer>3</integer>
 			<key>Hour</key>
 			<integer>6</integer>
 			<key>Minute</key>
-			<integer>0</integer>
+			<integer>10</integer>
 		</dict>
 		<dict>
+			<key>Weekday</key>
+            <integer>3</integer>
 			<key>Hour</key>
 			<integer>12</integer>
 			<key>Minute</key>
-			<integer>00</integer>
+			<integer>10</integer>
 		</dict>
 	</array>
 	<key>StandardErrorPath</key>

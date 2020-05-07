@@ -3,10 +3,14 @@ echo -n Please input slack webook url:
 read str
 
 sudo sh -c "cat malware_monitor.sh | sed \"s!##webook_url##!${str}!\" > /usr/local/bin/malware_monitor"
+sudo sh -c "cat malware_monitor_scan.sh | sed \"s!##webook_url##!${str}!\" > /usr/local/bin/malware_monitor_scan"
 sudo chmod 700 /usr/local/bin/malware_monitor
 sudo chown root:wheel /usr/local/bin/malware_monitor
+sudo chmod 700 /usr/local/bin/malware_monitor_scan
+sudo chown root:wheel /usr/local/bin/malware_monitor_scan
 sudo cp malware_monitor_update.sh /usr/local/bin/malware_monitor_update
 sudo chmod 700 /usr/local/bin/malware_monitor_update
+sudo chown root:wheel /usr/local/bin/malware_monitor_update
 sudo cp malware_monitor_wrapper /usr/local/bin/malware_monitor_wrapper
 sudo chmod 700 /usr/local/bin/malware_monitor_wrapper
 sudo chown root:wheel /usr/local/bin/malware_monitor_wrapper
@@ -27,4 +31,7 @@ sudo launchctl load /Library/LaunchDaemons/jp.aeyesec.ClamdOnAccessAlert.plist
 sudo install -m 644 ./jp.aeyesec.ClamdUpdate.plist /Library/LaunchDaemons
 sudo launchctl unload /Library/LaunchDaemons/jp.aeyesec.ClamdUpdate.plist 2> /dev/null
 sudo launchctl load /Library/LaunchDaemons/jp.aeyesec.ClamdUpdate.plist
+sudo install -m 644 ./jp.aeyesec.ClamdScheduledScan.plist /Library/LaunchDaemons
+sudo launchctl unload /Library/LaunchDaemons/jp.aeyesec.ClamdScheduledScan.plist 2> /dev/null
+sudo launchctl load /Library/LaunchDaemons/jp.aeyesec.ClamdScheduledScan.plist
 
