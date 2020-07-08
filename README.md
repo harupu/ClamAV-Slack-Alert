@@ -13,6 +13,7 @@ brew update
 2. install clamav and fswatch:
 
 ```
+brew install libtool
 brew install clamav
 brew install fswatch
 ```
