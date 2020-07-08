@@ -36,8 +36,8 @@ To find /usr/local/bin/ on dialog, type Command+Shift+G.
 5. Update and reload.
 
 ```
-$ freshclam -v
-$ /usr/local/bin/clamdscan --reload
+$ sudo freshclam -v
+$ sudo /usr/local/bin/clamdscan --reload
 ```
 
 6. Download eicar.com and check it works or not.
