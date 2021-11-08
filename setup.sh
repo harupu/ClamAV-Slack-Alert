@@ -14,14 +14,16 @@ sudo chown root:wheel /usr/local/bin/malware_monitor_update
 sudo cp malware_monitor_wrapper /usr/local/bin/malware_monitor_wrapper
 sudo chmod 700 /usr/local/bin/malware_monitor_wrapper
 sudo chown root:wheel /usr/local/bin/malware_monitor_wrapper
-cp freshclam.conf /usr/local/etc/clamav/freshclam.conf
-cp clamd.conf /usr/local/etc/clamav/clamd.conf
-mkdir /usr/local/etc/clamav/quarantine 2> /dev/null
-mkdir /var/log/clamav/ 2> /dev/null
-mkdir -p /usr/local/var/run/clamav 2> /dev/null
-chown _clamav /var/log/clamav/
-chown _clamav /usr/local/Cellar/clamav/*/share/clamav/
-chown _clamav /usr/local/var/run/clamav
+sudo cp freshclam.conf /usr/local/etc/clamav/freshclam.conf
+sudo cp clamd.conf /usr/local/etc/clamav/clamd.conf
+sudo mkdir /usr/local/etc/clamav/quarantine 2> /dev/null
+sudo mkdir /var/log/clamav/ 2> /dev/null
+sudo mkdir -p /usr/local/var/run/clamav 2> /dev/null
+sudo chown _clamav /var/log/clamav/
+sudo mkdir -p /usr/local/Cellar/clamav/0.104.1/share/clamav
+sudo chown _clamav /usr/local/Cellar/clamav/*/share/clamav/
+sudo chown _clamav /usr/local/var/run/clamav
+sudo /usr/local/bin/freshclam -v
 sudo install -m 644 ./jp.aeyesec.Clamd.plist /Library/LaunchDaemons
 sudo launchctl unload /Library/LaunchDaemons/jp.aeyesec.Clamd.plist 2> /dev/null
 sudo launchctl load /Library/LaunchDaemons/jp.aeyesec.Clamd.plist
