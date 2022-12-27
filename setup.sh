@@ -2,6 +2,8 @@
 echo -n Please input slack webook url:
 read str
 
+sudo mkdir /usr/local/bin/ 2>/dev/null
+sudo mkdir -p /usr/local/etc/clamav/ 2>/dev/null
 sudo sh -c "cat malware_monitor.sh | sed \"s!##webook_url##!${str}!\" > /usr/local/bin/malware_monitor"
 sudo sh -c "cat malware_monitor_scan.sh | sed \"s!##webook_url##!${str}!\" > /usr/local/bin/malware_monitor_scan"
 sudo chmod 700 /usr/local/bin/malware_monitor
