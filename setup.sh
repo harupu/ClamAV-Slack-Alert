@@ -25,6 +25,7 @@ sudo mkdir -p /usr/local/Cellar/clamav/0.104.1/share/clamav
 sudo chown _clamav /usr/local/Cellar/clamav/*/share/clamav/
 sudo chown _clamav /usr/local/var/run/clamav
 if [ -e "/opt/homebrew/sbin/clamd" ]; then
+  sudo cp freshclam.conf /opt/homebrew/etc/clamav/freshclam.conf
   sudo chown _clamav /opt/homebrew/var/lib/clamav
   sudo /opt/homebrew/bin/freshclam -v
   sudo install -m 644 ./jp.aeyesec.Clamd2.plist /Library/LaunchDaemons/jp.aeyesec.Clamd.plist
